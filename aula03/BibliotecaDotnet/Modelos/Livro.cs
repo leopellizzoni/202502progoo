@@ -4,6 +4,14 @@ namespace BibliotecaDotnet.Modelos;
 
 public class Livro
 {
+    public Livro(String titulo, String autor, int isbn, DateTime publicacao)
+    {
+        this.Titulo = titulo;
+        this.Autor = autor;
+        this.ISBN = isbn;
+        this.DataDePublicacao = publicacao;
+    }
+
     public String Titulo { get; set; }
 
     public String Autor { get; set; }
