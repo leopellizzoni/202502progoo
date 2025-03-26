@@ -4,6 +4,13 @@ namespace BibliotecaDotnet.Modelos;
 
 public class Usuario
 {   
+    public Usuario(int id, String nome, String whatsApp)
+    {
+        Id = id;
+        Nome = nome;
+        WhatsApp = whatsApp;
+    }
+
     public Usuario(int id, String nome, String email, String whatsApp)
     {
         Id = id;

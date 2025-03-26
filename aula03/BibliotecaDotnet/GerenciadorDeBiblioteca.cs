@@ -13,8 +13,14 @@ public class GerenciadorDeBiblioteca
         InicializarValores();
     }
 
+    private void ImprimirSeparador()
+    {
+        Console.WriteLine("------------------------------------");
+    }
+
     private void MostrarOpcoes()
     {
+        ImprimirSeparador();
         Console.WriteLine("Sistema de Biblioteca");
         Console.WriteLine("1 - Listar todos os livros");
         Console.WriteLine("2 - Listar usuários");
@@ -32,8 +38,17 @@ public class GerenciadorDeBiblioteca
         todosUsuarios[0] = new Usuario(1, "Usuário 1", "usuarioa1@ucs.br", "+555411111111");
     }
 
+    private void ImprimirOperacao(string descricao)
+    {
+        ImprimirSeparador();
+        Console.WriteLine(descricao);
+        ImprimirSeparador();
+    }
+
     private void ListarTodosLivros()
     {
+        ImprimirOperacao("Todos os Livros");
+        
         for (int i = 0; i < todosLivros.Length; i++)
         {
             todosLivros[i].ImprimirDescricao();
@@ -42,6 +57,8 @@ public class GerenciadorDeBiblioteca
 
     private void ListarTodosUsuarios()
     {
+        ImprimirOperacao("Todos os Usuários");
+
         foreach (Usuario usuario in todosUsuarios)
         {
             Console.WriteLine(usuario.ObterDescricaoPublica());
@@ -67,6 +84,27 @@ public class GerenciadorDeBiblioteca
         todosLivros = novosLivros;
     }
 
+    private void CadastrarUsuario()
+    {
+        int novoId = todosUsuarios.Length + 1;
+
+        Console.Write("Informe o nome: ");
+        String nome = Console.ReadLine();
+        Console.Write("Informe o WhatsApp: ");
+        String wa = Console.ReadLine();
+
+        Usuario[] novosUsuarios = new Usuario[todosUsuarios.Length + 1];
+
+        for (int i = 0; i < todosUsuarios.Length; i++)
+        {
+            novosUsuarios[i] = todosUsuarios[i];
+        }
+
+        novosUsuarios[novosUsuarios.Length - 1] = new Usuario(novoId, nome, wa);
+        
+        todosUsuarios = novosUsuarios;
+    }
+
     public void Iniciar()
     {
         int opcaoUsuario = 0;
@@ -87,6 +125,10 @@ public class GerenciadorDeBiblioteca
             else if (opcaoUsuario == 3)
             {
                 CadastrarLivro();
+            }
+            else if (opcaoUsuario == 4)
+            {
+                CadastrarUsuario();
             }
         } while (opcaoUsuario != 99);
 
