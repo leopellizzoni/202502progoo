@@ -3,7 +3,13 @@ using System;
 namespace BibliotecaDotnet.Modelos;
 
 public class Livro
-{
+{   
+    public Livro(String titulo, String autor)
+    {
+        this.Titulo = titulo;
+        this.Autor = autor; 
+    }
+
     public Livro(String titulo, String autor, int isbn, DateTime publicacao)
     {
         this.Titulo = titulo;

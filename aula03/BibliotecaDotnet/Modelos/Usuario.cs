@@ -20,6 +20,17 @@ public class Usuario
 
     public String WhatsApp {get;set;}
 
+    private String ObterDescricao()
+    {
+        return $"Id: {Id} Nome: {Nome}";
+    }
+
+    //Exemplo com private e public
+    public String ObterDescricaoPublica()
+    {
+        return ObterDescricao();
+    }
+
     //Lista de livros... TO DO
     
 }
