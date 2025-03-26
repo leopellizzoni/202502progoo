@@ -23,4 +23,14 @@ public class Livro
     public String Categoria { get; set; }
 
     public int Status { get; set; }
+
+    public String ObterDescricao()
+    {
+        return $"Título: {Titulo} | Autor: {Autor} | ISBN: {ISBN}";
+    }
+
+    public void ImprimirDescricao()
+    {
+        Console.WriteLine(ObterDescricao());
+    }
 }
