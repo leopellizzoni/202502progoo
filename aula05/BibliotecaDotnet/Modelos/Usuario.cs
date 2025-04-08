@@ -4,6 +4,9 @@ namespace BibliotecaDotnet.Modelos;
 
 public class Usuario
 {   
+    //Construtor da classe usuário. É o que executa quando chamamos new Usuario informando os parametros id, nome e whatsapp
+    //Podemos pensar no construtor como algo que transforma nossa classe (abstrata, que representa algo) para instancia na memoria do computador 
+    //Esta instancia passa a representar alguma informação que remete a algo concreto do mundo real.
     public Usuario(int id, String nome, String whatsApp)
     {
         Id = id;
@@ -11,6 +14,9 @@ public class Usuario
         WhatsApp = whatsApp;
     }
 
+    //Construtor da classe usuário. É o que executa quando chamamos new Usuario informando os parametros id, nome, email e whatsapp
+    //Podemos pensar no construtor como algo que transforma nossa classe (abstrata, que representa algo) para instancia na memoria do computador 
+    //Esta instancia passa a representar alguma informação que remete a algo concreto do mundo real.
     public Usuario(int id, String nome, String email, String whatsApp)
     {
         Id = id;
