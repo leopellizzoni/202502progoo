@@ -2,7 +2,7 @@ using System;
 
 namespace BibliotecaDotnet.Modelos;
 
-public class Livro
+public class Livro : ObjetoComId
 {   
     public Livro(String titulo, String autor)
     {

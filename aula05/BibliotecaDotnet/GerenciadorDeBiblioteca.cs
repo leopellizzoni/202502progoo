@@ -5,7 +5,7 @@ namespace BibliotecaDotnet;
 
 public class GerenciadorDeBiblioteca
 {
-    Livro[] todosLivros = new Livro[2];
+    Livro[] todosLivros = new Livro[5];
     Usuario[] todosUsuarios = new Usuario[1];
 
     public GerenciadorDeBiblioteca()
@@ -26,6 +26,7 @@ public class GerenciadorDeBiblioteca
         Console.WriteLine("2 - Listar usuários");
         Console.WriteLine("3 - Cadastrar livro");
         Console.WriteLine("4 - Cadastrar usuário");
+        Console.WriteLine("98 - Mudar conteudo livro pos. 3");
         Console.WriteLine("99 - Sair");
         Console.Write("Informe a opção: ");
     }
@@ -34,8 +35,14 @@ public class GerenciadorDeBiblioteca
     {
         todosLivros[0] = new Livro("Os Inovadores", "Isaac", 01, new DateTime(2020, 01, 01));
         todosLivros[1] = new Livro("Programador Pragmático", "Andy Hunt, Dave Thomas", 02, new DateTime(2020, 02, 02));
+        todosLivros[2] = new Livro("O senhor das moscas", "Wiliam Golding");
+        todosLivros[3] = new Livro("How to kill a mocking bird --------", "Herper Lee");
+        todosLivros[4] = new Livro("O senhor das moscas - Edicao Comemorativa", "Wiliam Golding");
 
-        todosUsuarios[0] = new Usuario(1, "Usuário 1", "usuarioa1@ucs.br", "+555411111111");
+        Usuario usuario = new Usuario(1, "Leonardo", "lpellizzoni@ucs.br", "+555411111111");
+        usuario.UltimoLivroRetirado = todosLivros[3];
+
+        todosUsuarios[0] = usuario;
     }
 
     private void ImprimirOperacao(string descricao)
@@ -129,6 +136,10 @@ public class GerenciadorDeBiblioteca
             else if (opcaoUsuario == 4)
             {
                 CadastrarUsuario();
+            }
+            else if (opcaoUsuario == 98)
+            {
+                todosLivros[3].Titulo = "Alterado na opçao 98";
             }
         } while (opcaoUsuario != 99);
 
