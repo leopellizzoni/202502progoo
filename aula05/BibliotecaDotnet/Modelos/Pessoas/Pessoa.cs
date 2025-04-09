@@ -36,4 +36,9 @@ public abstract class Pessoa : ObjetoComId
     {
         return "Nome: " + Nome;
     }
+
+    public virtual String TesteDeSobreescrita()
+    {
+        return "Veio da classe pai (Pessoa)";
+    }
 }

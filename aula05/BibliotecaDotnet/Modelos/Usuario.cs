@@ -47,4 +47,9 @@ public class Usuario : Pessoa
     {
         return ObterDescricao();
     }
+
+    public override string TesteDeSobreescrita()
+    {
+        return "Veio da Classe Filho (USUARIO)";
+    }
 }

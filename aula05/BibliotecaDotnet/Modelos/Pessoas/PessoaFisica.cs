@@ -25,4 +25,9 @@ public class PessoaFisica : Pessoa
     {
         return base.ObterDescricao() + " CPF: " + CPF;
     }
+
+    public override string TesteDeSobreescrita()
+    {
+        return "Veio da classe de PessoaFisica. Classe filho";
+    }
 }

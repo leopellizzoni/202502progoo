@@ -25,9 +25,9 @@ internal class Program
         empresa.NomeFantasia = "Fantasia";
         empresa.MetodoPublico();
 
-        Console.WriteLine(cidadao.ObterDescricao());
-        Console.WriteLine(empresa.ObterDescricao());
-        Console.WriteLine(usu.ObterDescricao());
+        Console.WriteLine("Cidadao: " + cidadao.TesteDeSobreescrita());
+        Console.WriteLine("Empresa: " + empresa.TesteDeSobreescrita());
+        Console.WriteLine("Usuario: " + usu.TesteDeSobreescrita());
 
     }
 }
