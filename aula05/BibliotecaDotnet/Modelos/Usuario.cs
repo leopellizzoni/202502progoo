@@ -1,8 +1,9 @@
 using System;
+using BibliotecaDotnet.Modelos.Pessoas;
 
 namespace BibliotecaDotnet.Modelos;
 
-public class Usuario : ObjetoComId
+public class Usuario : Pessoa
 {   
     //Construtor da classe usuário. É o que executa quando chamamos new Usuario informando os parametros id, nome e whatsapp
     //Podemos pensar no construtor como algo que transforma nossa classe (abstrata, que representa algo) para instancia na memoria do computador 
@@ -25,15 +26,13 @@ public class Usuario : ObjetoComId
         WhatsApp = whatsApp;
     }
 
-    public String Nome {get;set;}
-
     public String Email { get; set; }
 
     public String WhatsApp {get;set;}
     
     public Livro UltimoLivroRetirado {get;set;}
 
-    private String ObterDescricao()
+    public override String ObterDescricao()
     {
         if (UltimoLivroRetirado != null)
         {

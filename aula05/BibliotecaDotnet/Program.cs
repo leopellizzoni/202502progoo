@@ -12,16 +12,22 @@ internal class Program
 
         PessoaFisica cidadao = new PessoaFisica();
         PessoaJuridica empresa = new PessoaJuridica();
+        Usuario usu = new Usuario(1010, "Teste de Usuario", "(54)99999999");
 
         cidadao.Id = 1;
         cidadao.Nome = "Leonardo";
         cidadao.NomeDaMae = "Mae do Leonardo";
+        cidadao.CPF = "C222222222";
         cidadao.MetodoPublico();
 
         empresa.Id = 2;
         empresa.Nome = "Empresa do Leonardo";
         empresa.NomeFantasia = "Fantasia";
         empresa.MetodoPublico();
+
+        Console.WriteLine(cidadao.ObterDescricao());
+        Console.WriteLine(empresa.ObterDescricao());
+        Console.WriteLine(usu.ObterDescricao());
 
     }
 }

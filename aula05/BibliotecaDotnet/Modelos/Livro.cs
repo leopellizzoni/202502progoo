@@ -4,17 +4,18 @@ namespace BibliotecaDotnet.Modelos;
 
 //comentario de teste para o commit do github
 public class Livro : ObjetoComId
-{   
-    public Livro(String titulo, String autor)
+{
+
+    //encadeamento dos construtores atraves do this()
+    public Livro(String titulo, String autor) 
     {
         this.Titulo = titulo;
         this.Autor = autor; 
     }
 
-    public Livro(String titulo, String autor, int isbn, DateTime publicacao)
+    //encadeamento dos construtores atraves do this()
+    public Livro(String titulo, String autor, int isbn, DateTime publicacao) : this(titulo, autor)
     {
-        this.Titulo = titulo;
-        this.Autor = autor;
         this.ISBN = isbn;
         this.DataDePublicacao = publicacao;
     }
