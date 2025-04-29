@@ -29,5 +29,10 @@ internal class Program
         Console.WriteLine("Empresa: " + empresa.TesteDeSobreescrita());
         Console.WriteLine("Usuario: " + usu.TesteDeSobreescrita());
 
+
+        Onibus onibus = new Onibus("placa do outro onibus");
+        Onibus onibusMarcopolo = new Onibus("Marcopolo", "placa");
+
+        System.Console.WriteLine(onibus.ObterDescricaoDoVeiculo());;
     }
 }
