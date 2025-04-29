@@ -1,3 +1,4 @@
+package exemplocomclasses;
 public class Vendedor extends Funcionario {
     private Gerente chefe;
 

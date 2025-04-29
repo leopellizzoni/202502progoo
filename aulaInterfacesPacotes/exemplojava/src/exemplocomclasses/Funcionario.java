@@ -1,3 +1,5 @@
+package exemplocomclasses;
+
 public class Funcionario {
     private String nome;
     
@@ -7,7 +9,7 @@ public class Funcionario {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+     
     private double salario;
 
     public double getSalario() {
