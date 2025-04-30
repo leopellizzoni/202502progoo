@@ -2,10 +2,12 @@ package exemplocominterfaces;
 
 public interface Funcionario {
     String getNome();
-    String setNome();
+    void setNome(String novoNome);
 
     double getSalario();
-    double setSalario();
+    void setSalario(double novoSalario);
 
     String imprimirDescricao();
+
+    String getTelefone();
 }
