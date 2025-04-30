@@ -2,7 +2,7 @@ using System;
 
 namespace ExemploComInterfaces;
 
-public class Vaca //: IAnimal
+public class Vaca
 {
     public string EmitirSom()
     {

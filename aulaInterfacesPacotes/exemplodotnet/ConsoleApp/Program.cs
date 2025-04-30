@@ -28,6 +28,7 @@ IAnimal cachorro = new Cachorro();
 IAnimal gato = new Gato();
 //IAnimal vaca = new Vaca(); //Nao permite pois a classe vaca nao implementa a intereface IAniaml. Só funciona se houver os : IAnimal
 
+//Conseguimos usar porque o tipo da variavel é Vaca (classe) e não IAnimal (interface)
 Vaca vacaQueFunciona = new Vaca();
 vacaQueFunciona.EmitirSom();
 

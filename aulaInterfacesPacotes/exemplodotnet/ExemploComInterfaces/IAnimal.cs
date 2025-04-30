@@ -5,5 +5,7 @@ namespace ExemploComInterfaces;
 
 public interface IAnimal
 {
+    String Nome { get; set; }
+    
     String EmitirSom();
 }
