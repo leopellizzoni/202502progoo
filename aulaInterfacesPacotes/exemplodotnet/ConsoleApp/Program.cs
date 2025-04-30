@@ -28,5 +28,9 @@ IAnimal cachorro = new Cachorro();
 IAnimal gato = new Gato();
 //IAnimal vaca = new Vaca(); //Nao permite pois a classe vaca nao implementa a intereface IAniaml. Só funciona se houver os : IAnimal
 
+Vaca vacaQueFunciona = new Vaca();
+vacaQueFunciona.EmitirSom();
+
+
 Console.WriteLine(cachorro.EmitirSom()); //Espero que o retorno seja Au au 
 Console.WriteLine(gato.EmitirSom()); //Espero que o retorno seja Miau
