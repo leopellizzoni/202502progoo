@@ -1,5 +1,6 @@
 ﻿//equivale ao import do java ou include do c
-using ExemploComInterfaces; 
+using ExemploComInterfaces;
+using ExemploComInterfaces.Biblioteca;
 
 IBemVindo bemVindo;
 String opcaoIdioma;
@@ -35,3 +36,14 @@ vacaQueFunciona.EmitirSom();
 
 Console.WriteLine(cachorro.EmitirSom()); //Espero que o retorno seja Au au 
 Console.WriteLine(gato.EmitirSom()); //Espero que o retorno seja Miau
+
+Notificacao notif = new Notificacao();
+LivroDigital digi = new LivroDigital();
+LivroFisico fisico = new LivroFisico();
+ILivro fisicoPorInterface = new LivroFisico();
+
+notif.NotificarUsuarioDeNovaVersao(fisico);
+
+notif.NotificarUsuarioDeNovaVersao(digi);
+
+notif.NotificarUsuarioDeNovaVersao(fisicoPorInterface);
