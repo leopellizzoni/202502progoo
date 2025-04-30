@@ -13,7 +13,7 @@ public class App {
         v.imprimirDescricao();
         v.getTelefone();
         
-        //v.getMetodoSoNoVendor(); //apesar de existir nao vai deixar chamar aqui.
+        v.getMetodoSoNoVendor(); //apesar de existir se for da interface ou classe vendedor.
 
 
         System.out.println("Hello, World!");
