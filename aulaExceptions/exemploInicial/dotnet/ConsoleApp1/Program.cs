@@ -1,4 +1,5 @@
-﻿using TratamentoPIX;
+﻿using System.Xml;
+using TratamentoPIX;
 using TratamentoPIX.Excecoes;
 
 Console.WriteLine("Hello, World!");
@@ -20,6 +21,8 @@ catch (ExcecaoSaldoInsuficiente exSaldo) //*.ExcecaoSaldoInsuficiente
     Console.WriteLine("-----------------");
     System.Console.WriteLine("***********************");
     Console.WriteLine(exSaldo.Message);
+    System.Console.WriteLine("pilha de execucacao: ");
+    System.Console.WriteLine(exSaldo.StackTrace);
     System.Console.WriteLine("***********************");
      Console.WriteLine("-----------------");
 }

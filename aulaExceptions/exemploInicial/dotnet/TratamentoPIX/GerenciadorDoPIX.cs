@@ -25,7 +25,7 @@ public class GerenciadorDoPIX
         if (valor > Limite)
         {
             //Antes nos tinhamos o throw new Exception("texto")
-            throw new Exception($"Não podemos fazer o pix por causa do limite de {Limite} excedido");
+            throw new ExcecaoLimiteUltrapassou($"Não podemos fazer o pix por causa do limite de {Limite} excedido");
         }
 
         return true;
