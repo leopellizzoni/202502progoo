@@ -1,4 +1,5 @@
 ﻿using TratamentoPIX;
+using TratamentoPIX.Excecoes;
 
 Console.WriteLine("Hello, World!");
 
@@ -13,10 +14,25 @@ try
     //daqui em para baixo nao executa mais nada DENTRO desse try
     Console.WriteLine("Processamentos feitos com sucesso");
 }
-catch (Exception variavelEx)
+catch (ExcecaoSaldoInsuficiente exSaldo) //*.ExcecaoSaldoInsuficiente
 {
-    //apenas quando gera erro
-    Console.WriteLine("========================== ERRO");
+    Console.WriteLine("---VIA ExcecaoSaldoInsuficiente");
+    Console.WriteLine("-----------------");
+    System.Console.WriteLine("***********************");
+    Console.WriteLine(exSaldo.Message);
+    System.Console.WriteLine("***********************");
+     Console.WriteLine("-----------------");
+}
+catch (ExcecaoLimiteUltrapassou exLimite) //*.ExcecaoLimiteUltrapassou
+{
+    Console.WriteLine("---VIA ExcecaoLimiteUltrapassou");
+    //System.Console.WriteLine(exLimite.Message);
+    System.Console.WriteLine("Oi, amigo.. hoje infelizmente o limite das transf. foi atingido. Tente amanha ou entre em contato.");
+}
+catch (Exception variavelEx) //*.*
+{
+    //apenas quando gera erro do tipo exception
+    Console.WriteLine("---VIA Exception");
     Console.WriteLine(variavelEx.Message);
 }
 finally

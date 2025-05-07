@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+﻿using TratamentoPIX.Excecoes;
 
 namespace TratamentoPIX;
 
@@ -16,14 +16,16 @@ public class GerenciadorDoPIX
 
     public bool Transferir(double valor)
     {
-        if (valor > Limite)
-        {
-            throw new Exception($"Não podemos fazer o pix por causa do limite de {Limite} excedido");
-        }
-
         if (valor > Saldo)
         {
-            throw new Exception("Saldo insuficiente");
+            //Antes nos tinhamos o throw new Exception("texto")
+            throw new ExcecaoSaldoInsuficiente("Saldo insuficiente");
+        }
+
+        if (valor > Limite)
+        {
+            //Antes nos tinhamos o throw new Exception("texto")
+            throw new Exception($"Não podemos fazer o pix por causa do limite de {Limite} excedido");
         }
 
         return true;
